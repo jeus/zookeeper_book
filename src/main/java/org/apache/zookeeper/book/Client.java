@@ -47,7 +47,7 @@ public class Client implements Watcher, Closeable {
     String hostPort;
     volatile boolean connected = false;
     volatile boolean expired = false;
-    
+
     Client(String hostPort) { 
         this.hostPort = hostPort;
     }
@@ -305,6 +305,7 @@ public class Client implements Watcher, Closeable {
         
         while(!c.isConnected()){
             Thread.sleep(100);
+            System.out.println("dare chek mikone ke aya ok hast connection ya na");
         }   
         
         TaskObject task1 = new TaskObject();

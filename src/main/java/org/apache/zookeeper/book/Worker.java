@@ -237,6 +237,7 @@ public class Worker implements Watcher, Closeable {
 
     synchronized void changeExecutionCount(int countChange) {
         executionCount += countChange;
+        System.out.println("Chage Execution ");
         if (executionCount == 0 && countChange < 0) {
             // we have just become idle
             setStatus("Idle");
